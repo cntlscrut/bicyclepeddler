@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file: bp_menublock.module
+ *
+ * Create a block that contains the main menu links with logo and adds the js/css for
+ * shrinking on scroll
+ */
+
+/**
+ * implementation of hook_block_info
+ */
+function bp_menublock_block_info() {
+  $blocks = array();
+
+  $blocks['bp_blockmenu_main'] = array(
+    'info' => t('BP Top Menu'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * implementation of hook_block_view
+ */
+function bp_blockmenu_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'bp_blockmenu_main':
+      $block['content'] = 'hello main menu';
+      break;
+  }
+
+  return $block;
+}

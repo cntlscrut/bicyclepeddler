@@ -1,0 +1,5 @@
+name = Bike Peddler Top Menu
+description = creates the top main menu block for the site
+core = 7.x
+package = 'Bike Peddler'
+
